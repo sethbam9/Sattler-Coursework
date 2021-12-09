@@ -1,0 +1,31 @@
+str = """dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnwepofcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        dshgsdlgsjdhglsdkjghdsvhoewihcdsgsdhlkghsdlgiwurghwrfbsldgkjsbgwrtugwpigbsldkgjdslgkdgl
+        slfgkhslgusowiweuceouircnowefpweohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpofihewncpefo
+        """ * 100 + "slfgkhslgusowiweuceouircnowblueohwepoihfcnutfcewncwpoirucenwfcpeoifcnewpo"
