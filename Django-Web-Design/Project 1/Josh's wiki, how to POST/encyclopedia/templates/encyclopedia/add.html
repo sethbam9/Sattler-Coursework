@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!DOCTYPE html>
+
+<!--A simple form that posts to add when submitted.-->
+{% block body %}
+    <form action="{% url 'add' %}" method="post">
+        {% csrf_token %}
+        <label>Title: </label>
+        <input type="text" name="title"><br>
+        <textarea name="textarea"></textarea><br>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}

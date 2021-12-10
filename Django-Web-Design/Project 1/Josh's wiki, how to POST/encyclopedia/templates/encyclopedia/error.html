@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!DOCTYPE html>
+
+<!--Displays whatever error message is within the 'message' variable.-->
+<html lang="en">
+    {% block body %}
+        <h1>Error: {{ message }}</h1>
+    {% endblock %}
+</html>

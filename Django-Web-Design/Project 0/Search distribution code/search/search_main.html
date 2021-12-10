@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+
+  <body>
+    <!-- Links for Image Search and Advanced Search -->
+    <div class="linksDiv">
+      <!-- Button format idea from: https://stackoverflow.com/a/2906611 -->
+      <button class="btn" onclick="location.href='image_search.html'" type="button">Image Search</button><br>
+      <button class="btn" onclick="location.href='advanced_search.html'" type="button">Advanced Search</button><br>
+    </div>
+
+    <!-- Google Search form -->
+    <div class="center">
+      <form action="https://google.com/search">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"><br>
+        <input class="search" type="text" name="q"><br>
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <!-- names "btnK" and "btnI" taken from: view-source:https://www.google.com/webhp -->
+        <input type="submit" name="btnK" value="Google Search">
+        <input type="submit" name="btnI" value="I'm Feeling Lucky">
+      </form>
+    </div>
+  </body>
+</html>

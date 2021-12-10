@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!DOCTYPE html>
+
+<!--Simple form that is prepopulated and posts to wiki/TITLE when submitted.-->
+{% block body %}
+    <h1>Title: {{ title }}</h1>
+    <form action="{% url 'wiki' title=title %}" method="post">
+        {% csrf_token %}
+        <textarea name="textarea">{{ textarea }}</textarea><br>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}

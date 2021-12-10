@@ -1,0 +1,16 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ category.name }}</h2><br>
+
+    <ul style="list-style-type:none;">
+    {% for listing in listings %}
+    {% if listing.category == category %}
+      <li><h3><a href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h3></li>
+      <li><h4>Price: {{ listing.starting_bid }}</h4></li><br>
+      <li><img src="{{ listing.image }}" style="max-width:300px ;max-height:300px;"></li><br>
+      <li><b>Description</b><br>{{ listing.description }}</li><br><br>
+    {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}

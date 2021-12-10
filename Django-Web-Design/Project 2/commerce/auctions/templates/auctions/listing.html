@@ -1,0 +1,40 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ listing.title }}</h2>
+
+    <ul style="list-style-type:none;">
+      <li><img class="img" src="{{ listing.image }}" style="max-width:300px ;max-height:300px;"></li><br>
+      <li><b>Description</b><br>{{ listing.description }}</li><br>
+      <li><h4>Price: {{ listing.starting_bid }}</h4></li><br>
+    </ul>
+
+
+    <form action="{% url 'listing' listing.id %}" method="post", name="listing_form">
+      {% csrf_token %}
+      {% if user.is_authenticated %}
+      {{ bid_form }}
+      <label>New bid: </label>
+      <input type="number" required name="bid" step=".01", required="False"><br>
+      <label>Add to watchlist</label>
+      <input type="checkbox" name="watchlist" value="False"><br>
+      {% if user == listing.owner %}
+      <input type="button" name="close" value="Close deal"><br>
+      {% endif %}
+      {% endif %}
+      <label>Comment</label><br>
+      <input type="textarea" name="comment"><br><br>
+      <input type="submit" value="Update">
+    </form>
+
+    <br><br>
+    <h2>Comments</h2>
+    <ul style="list-style-type:none;">
+      {% for comment in comments %}
+      <li>{{ comment.commenter }}</li>
+      <li>{{ comment.created_on }}</li>
+      <li>{{ comment.body }}</li>
+      {% endfor %}
+    </ul>
+
+{% endblock %}

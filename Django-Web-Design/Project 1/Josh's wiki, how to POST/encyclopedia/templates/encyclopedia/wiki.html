@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!DOCTYPE html>
+
+<!--Displays an entry in HTML. Also has a hidden field form that posts data to edit when submitted.-->
+{% block body %}
+    {{ textarea|safe }}
+    <form action="{% url 'edit' %}" method="post" >
+            {% csrf_token %}
+            <input type="hidden" name="title" value={{ title }} />
+            <input type="submit" value="Edit">
+        </form>
+{% endblock %}

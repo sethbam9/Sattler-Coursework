@@ -1,0 +1,30 @@
+from kivymd.app import MDApp
+from kivymd.theming import ThemeManager
+from kivy.lang import Builder
+from kivy.core.window import Window
+from kivymd.uix.screen import Screen
+from kivy.uix.screenmanager import ScreenManager, Screen
+
+import app_kivy
+
+# About the dimensions of a Google Pixel 2XL
+Window.size = (350, 700)
+
+class SettingsScreen(Screen):
+    pass
+
+sm = ScreenManager()
+
+screens = [
+            SettingsScreen(name="settings")
+            ]
+
+for screen in screens:
+    sm.add_widget(screen)
+
+class MainApp(MDApp):
+     def build(self):
+        screen = Builder.load_string(app_kivy.screen_helper)
+        return screen
+    
+MainApp().run()

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Advanced Search</title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+
+  <body>
+    <!-- Heading -->
+    <div style="float:left;margin-left:40px">
+      <h2 style="color:red;margin:30px 0px 10px;font-weight:100">Advanced Search</h2>
+    </div>
+    <!-- Link for Google Search -->
+    <div class="linksDiv">
+      <button style="margin-top:20px" class="btn" onclick="location.href='search_main.html'" type="button">Google Search</button><br>
+    </div>
+
+    <hr style="position:relative;width:100%;color:gray;">
+
+    <!-- Search items -->
+    <div style="margin-left:40px;margin-top:40px;width:100%">
+
+      <form action="https://google.com/search" method="GET" name="f">
+        <h3 style="font-weight:100">Find pages with...</h3>
+        <!-- Item 1 -->
+        <div class="aWrapper">
+          <div class="aLabel">
+            <label>all these words:</label>
+          </div>
+          <div>
+            <input class="aTxt" type="text" name="as_q"><br>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="aWrapper">
+          <div class="aLabel">
+            <label>this exact word or phrase:</label>
+          </div>
+          <div>
+            <input class="aTxt" type="text" name="as_epq"><br>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="aWrapper">
+          <div class="aLabel">
+            <label>any of these words:</label>
+          </div>
+          <div>
+            <input class="aTxt" type="text" name="as_oq"><br>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="aWrapper">
+          <div class="aLabel">
+            <label>none of these words:</label>
+          </div>
+          <div>
+            <input class="aTxt" type="text" name="as_eq"><br>
+          </div>
+        </div>
+        <!-- Search button -->
+        <div class="aWrapper">
+          <input id="a_sub" type="submit" value="Advanced Search">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

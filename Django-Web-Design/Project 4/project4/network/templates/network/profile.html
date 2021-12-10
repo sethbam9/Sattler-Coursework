@@ -1,0 +1,20 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <!-- Username and follow/unfollow button -->
+    <div class="margins">
+      <h2 id="profile-h2">{{ profile }}</h2>
+      {% if request.user.id != profile.id and user.is_authenticated %}
+          <button id="follow-btn">{{ button }}</button>
+      {% endif %}
+    </div>
+
+    <!-- Following and followers count -->
+    <div class="margins">
+      <h5>Following: {{ following }}</h5>
+      <h5>Followers: {{ following }}</h5>
+    </div>
+
+    {% include 'network/post_block.html' %}
+
+{% endblock %}

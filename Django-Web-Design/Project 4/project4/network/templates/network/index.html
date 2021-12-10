@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+    <div class="margins">
+      <h2>All Posts</h2>
+    </div>
+
+    <!-- Give user the option to create a post if they have an account -->
+    <div class="margins">
+    {% if user.is_authenticated %}
+      <h3><a href="{% url 'create' %}">New Post</a></h2>
+    {% endif %}
+    </div>
+
+    {% include 'network/post_block.html' %}
+
+{% endblock %}
