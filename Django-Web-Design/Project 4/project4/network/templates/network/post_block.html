@@ -1,0 +1,62 @@
+<!-- File that formats the posts section of the page -->
+
+{% for post in page %}
+  <div class="post">
+    <!-- Poster, content, and timestamp -->
+    <div class="post-elem" id="post-tag">
+      <a href="{% url 'profile' post.creator %}">{{ post.creator }}</a>
+    </div>
+    <div class="post-elem" id="post-content" data-post="{{post.id}}">
+      {{ post.post }}
+    </div>
+    <div class="post-elem" id="timestamp">
+      {{ post.timestamp }}
+    </div>
+
+    <!-- Like and edit buttons -->
+    <div>
+      {% if request.user.is_authenticated %}
+        <div class="post-elem">
+          <button id="like-btn" data-post="{{post.id}}" data-liker="{{request.user.id}}"><i class="fa fa-thumbs-o-up"></i></button>
+          <p id="likes">likes: </p>
+        </div>
+      {% endif %}
+
+      {% if request.user == post.creator %}
+        <div class="post-elem">
+          <button id="edit-btn" data-post="{{post.id}}">Edit</button>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+{% endfor %}
+
+<!-- Bootstrap pagination - code idea from Vlad's section -->
+<nav aria-label="...">
+    <ul class="pagination">
+
+      <!-- Previous page button -->
+      {% if page.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page.previous_page_number }}">Previous</a>
+      </li>
+      {% endif %}
+
+      <!-- Current page numnber -->
+      {% if page.has_next %}
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">
+          {{page.number}}
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+
+      <!-- Next page button -->
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page.next_page_number }}">Next</a>
+      </li>
+      {% endif %}
+
+    </ul>
+</nav>

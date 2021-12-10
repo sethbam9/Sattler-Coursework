@@ -1,0 +1,67 @@
+{% load static %}
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="{% static 'marketplace/script.js' %}"></script>
+
+
+    <title>Index</title>
+</head>
+
+
+<body>
+
+
+    <a href="{% url 'index' %}">All</a> |
+    <a href="{% url 'make' 1 %}">Toyota</a> |
+    <a href="{% url 'make' 2 %}">Honda</a> |
+    <a href="{% url 'make' 3 %}">Ford</a>  <br>
+
+
+    {% for vehicle in page %}
+
+        {{ vehicle.make.name }} - {{ vehicle.type.name }} - {{ vehicle.model }} <br>
+
+        <div class="description" data-vehicle="{{vehicle.id}}">
+            {{ vehicle.description }}
+        </div><br>
+
+        <button class="edit" data-vehicle="{{vehicle.id}}">Edit</button>
+
+        <br><br><br>
+
+
+
+    {% endfor %}
+
+
+    <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">
+              {{page.number}}
+              <span class="sr-only">(current)</span>
+            </span>
+          </li>
+
+          {% if page.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page.next_page_number }}">Next</a>
+          </li>
+          {% endif %}
+
+
+        </ul>
+      </nav>
+
+
+
+</body>
+
+</html>

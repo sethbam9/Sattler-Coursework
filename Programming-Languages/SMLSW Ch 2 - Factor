@@ -1,0 +1,128 @@
+"""
+PART
+ONE
+"""
+
+# FACTOR MATH
+IN: scratchpad 20 5 + 4 * .
+100
+
+"DATA TYPES"
+
+# BOOLEANS
+IN: scratchpad 4 2 > .
+t
+IN: scratchpad "same" "same" = .
+t
+
+# SEQUENCES
+# list
+IN: scratchpad { 1 2 3 5 8 13 } length .
+6
+
+# map
+IN: scratchpad { { "one" 1 } { "two" 2 } { "three" 3 } } "one" of .
+1
+IN: scratchpad "two" { { "one" 1 } { "two" 2 } { "three" 3 } } at .
+2
+
+# QUOTATIONS
+IN: scratchpad 20
+--- Data stack:
+20
+IN: scratchpad [ 42 + ] <---- quote
+--- Data stack:
+20
+[ 42 + ]
+IN: scratchpad call
+--- Data stack:
+62
+
+# CONDITIONALS
+IN: scratchpad -5 0 > [ "pos" ] [ "neg" ] if .
+"neg"
+IN: scratchpad -5 0 > "pos" "neg" ? . # ? is used for just 2 vals
+"neg"
+
+# Two siblings of if are 'when' and 'unless' (no else clause):
+IN: scratchpad 10 0 > [ "pos" . ] when
+"pos"
+IN: scratchpad -5 0 > [ "neg" . ] unless
+"neg"
+
+"STACK SHUFFLING"
+IN: scratchpad 1 dup # duplicates a value
+--- Data stack:
+1
+1
+IN: scratchpad clear
+
+IN: scratchpad 1 2 drop # drops the top value
+--- Data stack:
+1
+IN: scratchpad clear
+
+IN: scratchpad 1 2 nip # drops the second value
+--- Data stack:
+2
+IN: scratchpad clear
+
+IN: scratchpad 1 2 swap # swaps two values
+--- Data stack:
+2
+1
+IN: scratchpad clear
+
+IN: scratchpad 1 2 over # duplicates the second value over to the top
+--- Data stack:
+1
+2
+1
+IN: scratchpad clear
+
+IN: scratchpad 1 2 3 rot # rotates three values
+--- Data stack:
+2
+3
+1
+
+"HIGH-ORDER WORDS with COMBINATORS"
+IN: scratchpad 44.50 [ 0.05 * ] [ 0.09975 * ] bi
+--- Data stack:
+2.225
+4.438875
+
+IN: scratchpad 44.50 22.50 [ 0.05 * ] bi@
+--- Data stack:
+2.225
+1.125
+
+IN: scratchpad 44.50 22.50 [ 0.05 * ] [ 0.09975 * ] bi*
+--- Data stack:
+2.225
+2.244375
+
+"""DAY 1"""
+# Using only * and +, how would you calculate 32 + 42 with Factor?
+IN: scratchpad 3 3 * 4 4 * + .
+25
+
+# With sq and sqrt, calculate the square root of 32 + 42.
+IN: scratchpad 3 sq 4 sq + sqrt .
+5.0
+
+# If you had the numbers 1 2 on the stack, what code could you use to end
+# up with 1 1 2 on the stack?
+
+
+"""
+PART
+TWO
+"""
+
+# DEFINING WORDS
+: add-42 ( x -- y ) 42 + ;
+IN: math MATH: + ( x y -- z )
+: sum ( seq -- n ) 0 [ + ] reduce ;
+
+# R

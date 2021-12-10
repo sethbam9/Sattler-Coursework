@@ -1,0 +1,33 @@
+<Runner>:
+    #Handling the gesture event.
+    on_left_to_right_line: manager.current = 'main_screen';  manager.transition.direction = 'right'
+    ScreenManager:
+        id: manager
+        Screen:
+            name: "main_screen"
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                Button:
+                    text: "Child 1"
+                    on_release:
+                        manager.current = "child1"
+                        manager.transition.direction = 'left'
+
+                Label:
+                Button:
+                    text: "Child 2"
+                    on_release:
+                        manager.current = "child1"
+                        manager.transition.direction = 'left'
+                Label:
+
+        Screen:
+            name: "child1"
+            Label:
+                text: "Swipe from left to right to go to main screen (CHILD 1)"
+
+        Screen:
+            name: "child2"
+            Label:
+                text: "Swipe from left to right to go to main screen (CHILD 1)"

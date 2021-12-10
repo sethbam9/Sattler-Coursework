@@ -1,0 +1,14 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Watchlist</h2><br>
+
+    <ul style="list-style-type:none;">
+    {% for user_listing in user_listings %}
+      <li><h3><a href="{% url 'listing' user_listing.listing.id %}">{{ user_listing.listing.title }}</a></h3></li>
+      <li><h4>Price: {{ user_listing.listing.starting_bid }}</h4></li><br>
+      <li><img src="{{ user_listing.listing.image }}" style="max-width:300px ;max-height:300px;"></li><br>
+      <li><b>Description</b><br>{{ user_listing.listing.description }}</li><br><br>
+    {% endfor %}
+    </ul>
+{% endblock %}

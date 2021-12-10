@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit {{ title }} - Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Edit {{ title }}</h1>
+    <form action="{% url 'save' %}" method="GET">
+        <input type="hidden" name="title" value="{{title}}">
+        <input type="hidden" name="boolean" value="True">
+        <textarea name="markdown" rows="4" cols="50" placeholder="Markdown text">{{entry}}</textarea>
+        <input type="submit" value="Save Entry">
+    </form>
+{% endblock %}

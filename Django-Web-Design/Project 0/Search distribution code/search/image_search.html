@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Image Search</title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+
+  <body>
+    <!-- Link for Google Search -->
+    <div class="linksDiv">
+      <button class="btn" onclick="location.href='search_main.html'" type="button">Google Search</button><br>
+    </div>
+
+    <!-- Image Search form-->
+    <div class="center">
+      <form action="http://images.google.com/images">
+
+        <!-- Formatting the Google logo. -->
+        <div id="img">
+          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+          <div style="float: right">
+            <p id="logo">Images</p>
+          </div>
+        </div>
+        <!-- Search button -->
+        <input class="search" type="text" name="q"><br>
+        <input type="submit" value="Search Images">
+      </form>
+    </div>
+  </body>
+</html>

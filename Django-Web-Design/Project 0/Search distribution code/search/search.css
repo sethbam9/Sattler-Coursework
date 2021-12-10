@@ -1,0 +1,106 @@
+* {font-family:Arial}
+
+/* div for the links */
+.linksDiv {
+  float: right;
+  padding: 10px;
+}
+
+/* Centered div in search_main and image_search */
+.center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+}
+
+/* Button format for the links */
+.btn {
+  text-align: left;
+  width: 140px;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+}
+.btn:hover {background-color: #F0F0F0	}
+
+/* Search bar in search_main and image_search */
+.search {
+  border-radius:20px;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 20px;
+  border-width: thin;
+  border-color: #F0F0F0	;
+  outline-width: 0;
+  font-size: 14px;
+}
+
+input[type=submit] {
+  border-radius:2px;
+  padding: 9px 20px;
+  margin: 0px 5px;
+  border: none;
+  background-color: #F0F0F0;
+}
+input[type=submit]:hover {
+  border: solid;
+  border-width: 1px;
+  margin-top: -1px;
+  border-color: #D3D3D3;
+}
+
+/* div for the google logo in image_search */
+div#img {
+  width: 272px;
+  margin: 0 auto;
+}
+
+/* google "images" part of logo in image_search */
+p#logo {
+  margin-top: -20px;
+  margin-bottom: -10px;
+  color: blue;
+}
+
+/* advanced_search div wrapper */
+.aWrapper {
+  width: 80%;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* advanced_search label */
+.aLabel {
+  width: 30%;
+  float: left;
+}
+
+/* advanced_search text input */
+.aTxt {
+  width:60%;
+  padding: 4px 10px;
+  border-width: thin;
+  border-color: #F0F0F0	;
+  outline-width: 0;
+  font-size: 14px;
+}
+
+/* Advanced submit input */
+input#a_sub {
+  float: right;
+  margin-right: 50px;
+  margin-top:5px;
+  background-color: blue;
+  border: none;
+  color: white;
+ }
+ input#a_sub:hover {
+   border: 1px solid;
+   border-color: darkblue;
+ }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello</title>
+        <script>
+
+            function my_hello() {
+                // query selecter finds an html element in the page
+                const header = document.querySelector('h1');
+                if (header.innerHTML === 'Hello') {
+                    header.innerHTML = 'Goodbye';
+                }
+                else {
+                    header.innerHTML = 'Hello';
+                }
+            }
+
+            function my_name() {
+                const header2 = document.querySelector('h2');
+                if (header2.innerHTML === 'Seth!') {
+                    header2.innerHTML = 'Friend!';
+                }
+                else {
+                    header2.innerHTML = 'Seth!';
+                }
+            }
+
+            function my_content() {
+                const para = document.querySelector('p');
+                if (para.innerHTML.includes('example')) {
+                    alert("This is an example");
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <h2>Seth!</h2>
+        <p>This is an example of using JS to change html elements</p>
+
+        <button onclick="my_hello()">Click Here</button><br>
+        <button onclick="my_name()">Click Here</button><br>
+        <button onclick="my_content()">Click Here</button><br>
+
+    </body>
+</html>

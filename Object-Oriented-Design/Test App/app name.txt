@@ -1,0 +1,3 @@
+title=My App
+author=sethbam
+orientation=portrait

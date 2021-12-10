@@ -1,0 +1,59 @@
+.margins {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.body {
+  padding: 15px;
+}
+
+.post {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-elem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#post-tag {
+  font-size: 20px;
+}
+
+#timestamp {
+  color: gray;
+}
+
+#profile-h2 {
+  display: inline-block;
+  margin: 0;
+  margin-top: 5px;
+}
+
+#follow-btn {
+  float-right;
+  margin-left: 20px;
+}
+
+#like-btn {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+
+}
+
+#likes {
+  float-right;
+}
+
+:is(h1, h2, h3 {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+:is(h4, h5, h6) {
+  padding-bottom: 5px;
+}

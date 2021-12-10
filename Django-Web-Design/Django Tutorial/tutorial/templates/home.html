@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ name }}</h1>
+
+<p>This is a template</p>
+  <ul>
+    {% for page in pages %}
+      <li>{{ page }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Testing syntax</p>
+  <ul>
+    {% for item in my_list %}
+      {% if "mom" in item %}
+        <li>{{ forloop.counter }} - {{ item|add:" ❤️" }}
+      {% elif item == "made" %}
+        <li>{{ forloop.counter }} - {{ item|add:" 😠" }}
+      {% else %}
+        <li>{{ forloop.counter }} - {{ item }}
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+{% endblock %}
